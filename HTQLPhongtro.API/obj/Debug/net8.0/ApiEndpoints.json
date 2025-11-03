@@ -1,0 +1,220 @@
+[
+  {
+    "ContainingType": "HTQLPhongtro.API.Controllers.QuanLyLoaiPhongController",
+    "Method": "LayDanhSach",
+    "RelativePath": "api/QuanLyLoaiPhong",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HTQLPhongtro.API.DTOs.LoaiPhongThongTinDTO, HTQLPhongtro.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HTQLPhongtro.API.Controllers.QuanLyLoaiPhongController",
+    "Method": "TaoMoi",
+    "RelativePath": "api/QuanLyLoaiPhong",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "HTQLPhongtro.API.DTOs.LoaiPhongTaoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HTQLPhongtro.API.DTOs.LoaiPhongThongTinDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HTQLPhongtro.API.Controllers.QuanLyLoaiPhongController",
+    "Method": "LayTheoId",
+    "RelativePath": "api/QuanLyLoaiPhong/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HTQLPhongtro.API.DTOs.LoaiPhongThongTinDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HTQLPhongtro.API.Controllers.QuanLyLoaiPhongController",
+    "Method": "CapNhat",
+    "RelativePath": "api/QuanLyLoaiPhong/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "HTQLPhongtro.API.DTOs.LoaiPhongCapNhatDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HTQLPhongtro.API.Controllers.QuanLyLoaiPhongController",
+    "Method": "Xoa",
+    "RelativePath": "api/QuanLyLoaiPhong/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HTQLPhongtro.API.Controllers.QuanLyPhongController",
+    "Method": "LayDanhSachPhong",
+    "RelativePath": "api/QuanLyPhong",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HTQLPhongtro.API.DTOs.ThongTinPhongDTO, HTQLPhongtro.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HTQLPhongtro.API.Controllers.QuanLyPhongController",
+    "Method": "TaoPhongMoi",
+    "RelativePath": "api/QuanLyPhong",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taoPhongDto",
+        "Type": "HTQLPhongtro.API.DTOs.TaoPhongMoiDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HTQLPhongtro.API.DTOs.ThongTinPhongDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HTQLPhongtro.API.Controllers.QuanLyPhongController",
+    "Method": "LayThongTinPhong",
+    "RelativePath": "api/QuanLyPhong/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HTQLPhongtro.API.DTOs.ThongTinPhongDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HTQLPhongtro.API.Controllers.QuanLyPhongController",
+    "Method": "CapNhatPhong",
+    "RelativePath": "api/QuanLyPhong/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "capNhatPhongDto",
+        "Type": "HTQLPhongtro.API.DTOs.CapNhatPhongDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HTQLPhongtro.API.Controllers.QuanLyPhongController",
+    "Method": "XoaPhong",
+    "RelativePath": "api/QuanLyPhong/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

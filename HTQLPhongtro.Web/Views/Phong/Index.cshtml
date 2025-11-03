@@ -1,0 +1,76 @@
+@model IEnumerable<HTQLPhongtro.Web.Models.PhongMoHinh>
+
+@{
+    ViewData["Title"] = "Danh sách phòng";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (TempData["Loi"] is string msg && !string.IsNullOrWhiteSpace(msg))
+{
+    <div class="alert alert-warning">@msg</div>
+}
+
+<form method="get" class="row g-2 mb-3">
+    <div class="col-md-5">
+        <input type="text" name="tuKhoa" value="@Context.Request.Query["tuKhoa"]" class="form-control" placeholder="Tìm tên phòng..." />
+    </div>
+    <div class="col-md-4">
+        <select name="trangThai" class="form-select">
+            <option value="">-- Tất cả trạng thái --</option>
+            <option value="Available" selected="@(Context.Request.Query["trangThai"]=="Available")">Available</option>
+            <option value="Trống" selected="@(Context.Request.Query["trangThai"]=="Trống")">Trống</option>
+            <option value="Busy" selected="@(Context.Request.Query["trangThai"]=="Busy")">Busy</option>
+        </select>
+    </div>
+    <div class="col-md-3 d-flex gap-2">
+        <button class="btn btn-outline-primary" type="submit">Lọc</button>
+        <a asp-action="Index" class="btn btn-outline-secondary">Xóa lọc</a>
+        <a asp-action="Tao" class="btn btn-primary ms-auto">Tạo phòng</a>
+    </div>
+</form>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Mã</th>
+                <th>Tên phòng</th>
+                <th>Tầng</th>
+                <th>Diện tích (m²)</th>
+                <th>Giá thuê</th>
+                <th>Số người tối đa</th>
+                <th>Trạng thái</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.MaPhong</td>
+                <td>@p.TenPhong</td>
+                <td>@p.Tang</td>
+                <td>@p.DienTich</td>
+                <td>@p.GiaThue.ToString("N0")</td>
+                <td>@p.SoNguoiToiDa</td>
+                <td>
+                    <span class="badge bg-@(p.TrangThai == "Available" || p.TrangThai == "Trống" ? "success" : "secondary")">@p.TrangThai</span>
+                </td>
+                <td class="text-nowrap">
+                    <a asp-action="Sua" asp-route-id="@p.MaPhong" class="btn btn-sm btn-outline-secondary">Sửa</a>
+                    <form asp-action="Xoa" asp-route-id="@p.MaPhong" method="post" class="d-inline" onsubmit="return confirm('Xóa phòng này?');">
+                        <button type="submit" class="btn btn-sm btn-outline-danger">Xóa</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">Chưa có dữ liệu phòng.</div>
+    }
+}
+
+

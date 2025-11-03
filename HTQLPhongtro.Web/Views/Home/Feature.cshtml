@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Chức năng";
+    var id = (string?)ViewData["FeatureId"] ?? "";
+}
+
+<div class="mt-5 text-center">
+    <h2>Chức năng "@id"</h2>
+    <p class="text-muted">Tính năng này sẽ được hoàn thiện trong các bước tiếp theo.</p>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Quay lại trang chính</a>
+ </div>
+
+

@@ -1,0 +1,71 @@
+@model IEnumerable<HTQLPhongtro.Web.Models.LoaiPhongMoHinh>
+
+@{
+    ViewData["Title"] = "Loại phòng";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@if (TempData["Loi"] is string msg && !string.IsNullOrWhiteSpace(msg))
+{
+    <div class="alert alert-warning">@msg</div>
+}
+
+<form method="get" class="row g-2 mb-3">
+    <div class="col-md-6">
+        <input type="text" name="tuKhoa" value="@Context.Request.Query["tuKhoa"]" class="form-control" placeholder="Tìm tên loại phòng..." />
+    </div>
+    <div class="col-md-3">
+        <select name="isActive" class="form-select">
+            <option value="">-- Tất cả --</option>
+            <option value="true" selected="@(Context.Request.Query["isActive"]=="true")">Kích hoạt</option>
+            <option value="false" selected="@(Context.Request.Query["isActive"]=="false")">Ngưng</option>
+        </select>
+    </div>
+    <div class="col-md-3 d-flex gap-2">
+        <button class="btn btn-outline-primary" type="submit">Lọc</button>
+        <a asp-action="Index" class="btn btn-outline-secondary">Xóa lọc</a>
+        <a asp-action="Tao" class="btn btn-primary ms-auto">Tạo loại phòng</a>
+    </div>
+</form>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Mã</th>
+                <th>Tên loại</th>
+                <th>Mô tả</th>
+                <th>Giá gốc (min-max)</th>
+                <th>Trạng thái</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.MaLoai</td>
+                <td>@x.TenLoai</td>
+                <td>@x.MoTa</td>
+                <td>@(x.GiaThueGocMin?.ToString("N0")) - @(x.GiaThueGocMax?.ToString("N0"))</td>
+                <td>
+                    <span class="badge bg-@(x.IsActive ? "success" : "secondary")">@(x.IsActive ? "Kích hoạt" : "Ngưng")</span>
+                </td>
+                <td class="text-nowrap">
+                    <a asp-action="Sua" asp-route-id="@x.MaLoai" class="btn btn-sm btn-outline-secondary">Sửa</a>
+                    <form asp-action="Xoa" asp-route-id="@x.MaLoai" method="post" class="d-inline" onsubmit="return confirm('Xóa loại phòng này?');">
+                        <button type="submit" class="btn btn-sm btn-outline-danger">Xóa</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">Chưa có loại phòng.</div>
+    }
+}
+
+

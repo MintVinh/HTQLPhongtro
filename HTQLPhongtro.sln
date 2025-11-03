@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTQLPhongtro.API", "HTQLPhongtro.API\HTQLPhongtro.API.csproj", "{CCD08C76-F100-48B7-8076-A21C4F848DCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTQLPhongtro.Web", "HTQLPhongtro.Web\HTQLPhongtro.Web.csproj", "{88FB752A-EBAD-4D63-AB4A-807946EE3D17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCD08C76-F100-48B7-8076-A21C4F848DCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCD08C76-F100-48B7-8076-A21C4F848DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCD08C76-F100-48B7-8076-A21C4F848DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCD08C76-F100-48B7-8076-A21C4F848DCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88FB752A-EBAD-4D63-AB4A-807946EE3D17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88FB752A-EBAD-4D63-AB4A-807946EE3D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88FB752A-EBAD-4D63-AB4A-807946EE3D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88FB752A-EBAD-4D63-AB4A-807946EE3D17}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {29F1B7DF-A75E-4C63-9F2A-C6EE38B67225}
+	EndGlobalSection
+EndGlobal

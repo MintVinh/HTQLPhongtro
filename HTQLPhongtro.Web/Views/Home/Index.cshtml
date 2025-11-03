@@ -1,0 +1,122 @@
+﻿@{
+    ViewData["Title"] = "Trang chính";
+}
+
+<div class="d-flex align-items-center justify-content-between mb-3">
+    <div>
+        <h1 class="m-0">Chức năng ứng dụng</h1>
+        <div class="phan-tieu-de">Truy cập nhanh các phân hệ quản lý</div>
+    </div>
+    <div></div>
+}</div>
+
+<div class="row g-3">
+    <div class="col-sm-6 col-md-4 col-lg-3">
+        <a asp-controller="Phong" asp-action="Index" class="text-decoration-none">
+            <div class="the-chuc-nang h-100 p-3">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                    <div class="bieu-tuong">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M8 3.293l6 6V13a1 1 0 0 1-1 1h-3v-3H6v3H3a1 1 0 0 1-1-1V9.293l6-6z"/>
+                        </svg>
+                    </div>
+                    <h5 class="m-0">Phòng</h5>
+                </div>
+                <div class="phan-tieu-de">Quản lý danh sách phòng, giá, trạng thái</div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3">
+        <a asp-controller="LoaiPhong" asp-action="Index" class="text-decoration-none">
+            <div class="the-chuc-nang h-100 p-3">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                    <div class="bieu-tuong">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3z"/>
+                        </svg>
+                    </div>
+                    <h5 class="m-0">Loại phòng</h5>
+                </div>
+                <div class="phan-tieu-de">Danh mục loại phòng và giá gốc</div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3">
+        <a asp-controller="Home" asp-action="Feature" asp-route-id="hop-dong" class="text-decoration-none">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Hợp đồng</h5>
+                    <p class="card-text">Tạo/lưu trữ hợp đồng thuê</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3">
+        <a asp-controller="Home" asp-action="Feature" asp-route-id="chi-so" class="text-decoration-none">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Chỉ số điện nước</h5>
+                    <p class="card-text">Nhập/chốt chỉ số theo kỳ</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3">
+        <a asp-controller="Home" asp-action="Feature" asp-route-id="hoa-don" class="text-decoration-none">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Hóa đơn</h5>
+                    <p class="card-text">Sinh hóa đơn, theo dõi công nợ</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3">
+        <a asp-controller="Home" asp-action="Feature" asp-route-id="thanh-toan" class="text-decoration-none">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Thanh toán</h5>
+                    <p class="card-text">Xác nhận/đối soát thanh toán</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3">
+        <a asp-controller="Home" asp-action="Feature" asp-route-id="khach-hang" class="text-decoration-none">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Khách thuê</h5>
+                    <p class="card-text">Hồ sơ và lịch sử cư trú</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3">
+        <a asp-controller="Home" asp-action="Feature" asp-route-id="bao-tri" class="text-decoration-none">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Yêu cầu sửa chữa</h5>
+                    <p class="card-text">Ticket, SLA, phân công</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3">
+        <a asp-controller="Home" asp-action="Feature" asp-route-id="bao-cao" class="text-decoration-none">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Báo cáo</h5>
+                    <p class="card-text">Doanh thu, công nợ, lấp đầy</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

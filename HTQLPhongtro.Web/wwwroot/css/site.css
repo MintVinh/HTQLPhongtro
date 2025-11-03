@@ -1,0 +1,87 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+:root {
+  --mau-nen: #f5f7fb;
+  --mau-chu-dam: #1d2a3a;
+  --mau-chu-phu: #5b6876;
+  --mau-chu-trang: #ffffff;
+  --mau-chu-diem: #2f6fde;
+  --mau-the-nen: #ffffff;
+  --mau-the-bien: #e7ecf3;
+  --mau-the-hover: #f0f4fb;
+  --mau-thanh-dieu-huong: #ffffffcc;
+  --mau-nut-chinh: #2f6fde;
+  --mau-nut-chinh-hover: #255bb4;
+}
+
+body {
+  margin-bottom: 60px;
+  background: var(--mau-nen);
+  color: var(--mau-chu-dam);
+}
+
+.navbar {
+  background: var(--mau-thanh-dieu-huong) !important;
+  backdrop-filter: saturate(180%) blur(10px);
+}
+
+.navbar-brand, .nav-link {
+  color: var(--mau-chu-dam) !important;
+}
+
+.btn-primary {
+  background-color: var(--mau-nut-chinh);
+  border-color: var(--mau-nut-chinh);
+}
+.btn-primary:hover {
+  background-color: var(--mau-nut-chinh-hover);
+  border-color: var(--mau-nut-chinh-hover);
+}
+
+.the-chuc-nang {
+  border: 1px solid var(--mau-the-bien);
+  border-radius: 12px;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  background: var(--mau-the-nen);
+}
+.the-chuc-nang:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  background: var(--mau-the-hover);
+}
+.the-chuc-nang .bieu-tuong {
+  width: 44px; height: 44px; border-radius: 10px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: #e8f0fe; color: var(--mau-chu-diem);
+}
+
+.phan-tieu-de {
+  color: var(--mau-chu-phu);
+}
+
+.khung-dang-nhap {
+  border: 1px solid var(--mau-the-bien);
+  background: var(--mau-the-nen);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+.nen-mem {
+  background: linear-gradient(135deg, #f6f9ff 0%, #f3f7ff 40%, #eef4ff 100%);
+}

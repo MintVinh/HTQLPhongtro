@@ -1,0 +1,7 @@
+﻿tro.API\Program.cs
+using HTQLPhongtro.API.Services; // Ensure this using is present
+
+// ... rest of your code ...
+
+// Thêm vào phần đăng ký services trong Program.cs
+builder.Services.AddScoped<IDonViCongViec, DonViCongViec>();

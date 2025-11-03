@@ -1,0 +1,45 @@
+@model IEnumerable<HTQLPhongtro.Web.Models.PhongViewModel>
+
+@{
+    ViewData["Title"] = "Danh sách phòng";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Mã</th>
+                <th>Tên phòng</th>
+                <th>Tầng</th>
+                <th>Diện tích (m²)</th>
+                <th>Giá thuê</th>
+                <th>Số người tối đa</th>
+                <th>Trạng thái</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.MaPhong</td>
+                <td>@p.TenPhong</td>
+                <td>@p.Tang</td>
+                <td>@p.DienTich</td>
+                <td>@p.GiaThue.ToString("N0")</td>
+                <td>@p.SoNguoiToiDa</td>
+                <td>
+                    <span class="badge bg-@(p.TrangThai == "Available" || p.TrangThai == "Trống" ? "success" : "secondary")">@p.TrangThai</span>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">Chưa có dữ liệu phòng.</div>
+    }
+}
+
+

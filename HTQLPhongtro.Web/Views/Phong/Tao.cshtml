@@ -1,0 +1,57 @@
+@model HTQLPhongtro.Web.Models.PhongTaoYeuCau
+
+@{
+    ViewData["Title"] = "Tạo phòng";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Tao" method="post" class="mt-3">
+    <div class="row g-3">
+        <div class="col-md-4">
+            <label class="form-label">Mã chủ trọ</label>
+            <input asp-for="MaChuTro" class="form-control" />
+            <span asp-validation-for="MaChuTro" class="text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">Mã loại phòng</label>
+            <input asp-for="MaLoaiPhong" class="form-control" />
+            <span asp-validation-for="MaLoaiPhong" class="text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">Tên phòng</label>
+            <input asp-for="TenPhong" class="form-control" />
+            <span asp-validation-for="TenPhong" class="text-danger"></span>
+        </div>
+        <div class="col-md-3">
+            <label class="form-label">Tầng</label>
+            <input asp-for="Tang" class="form-control" />
+            <span asp-validation-for="Tang" class="text-danger"></span>
+        </div>
+        <div class="col-md-3">
+            <label class="form-label">Diện tích</label>
+            <input asp-for="DienTich" class="form-control" />
+            <span asp-validation-for="DienTich" class="text-danger"></span>
+        </div>
+        <div class="col-md-3">
+            <label class="form-label">Giá thuê</label>
+            <input asp-for="GiaThue" class="form-control" />
+            <span asp-validation-for="GiaThue" class="text-danger"></span>
+        </div>
+        <div class="col-md-3">
+            <label class="form-label">Số người tối đa</label>
+            <input asp-for="SoNguoiToiDa" class="form-control" />
+            <span asp-validation-for="SoNguoiToiDa" class="text-danger"></span>
+        </div>
+        <div class="col-12">
+            <label class="form-label">Mô tả</label>
+            <textarea asp-for="MoTa" class="form-control"></textarea>
+        </div>
+    </div>
+    <div class="mt-3 d-flex gap-2">
+        <button type="submit" class="btn btn-primary">Lưu</button>
+        <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+    </div>
+</form>
+
+
