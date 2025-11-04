@@ -1,0 +1,79 @@
+@model IEnumerable<HTQLPhongtro.Web.Models.HopDongMoHinh>
+
+@{
+    ViewData["Title"] = "Danh sách hợp đồng";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (TempData["Loi"] is string msg && !string.IsNullOrWhiteSpace(msg))
+{
+    <div class="alert alert-warning">@msg</div>
+}
+
+<form method="get" class="row g-2 mb-3">
+    <div class="col-md-5">
+        <input type="text" name="tuKhoa" value="@Context.Request.Query["tuKhoa"]" class="form-control" placeholder="Tìm mã hợp đồng..." />
+    </div>
+    <div class="col-md-4">
+        <select name="trangThai" class="form-select">
+            <option value="">-- Tất cả trạng thái --</option>
+            <option value="Active" selected="@(Context.Request.Query["trangThai"]=="Active")">Active</option>
+            <option value="Inactive" selected="@(Context.Request.Query["trangThai"]=="Inactive")">Inactive</option>
+            <option value="Expired" selected="@(Context.Request.Query["trangThai"]=="Expired")">Expired</option>
+        </select>
+    </div>
+    <div class="col-md-3 d-flex gap-2">
+        <button class="btn btn-outline-primary" type="submit">Lọc</button>
+        <a asp-action="Index" class="btn btn-outline-secondary">Xóa lọc</a>
+        <a asp-action="Tao" class="btn btn-primary ms-auto">Thêm hợp đồng</a>
+    </div>
+</form>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Mã</th>
+                <th>Mã hợp đồng</th>
+                <th>Mã phòng</th>
+                <th>Mã khách</th>
+                <th>Ngày bắt đầu</th>
+                <th>Ngày kết thúc</th>
+                <th>Giá thuê</th>
+                <th>Tiền cọc</th>
+                <th>Trạng thái</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaHopDong</td>
+                <td>@item.MaHopDongString</td>
+                <td>@item.MaPhong</td>
+                <td>@item.MaKhach</td>
+                <td>@item.NgayBatDau.ToString("dd/MM/yyyy")</td>
+                <td>@item.NgayKetThuc.ToString("dd/MM/yyyy")</td>
+                <td>@item.GiaThue.ToString("N0")</td>
+                <td>@item.TienCoc.ToString("N0")</td>
+                <td>
+                    <span class="badge bg-@(item.TrangThai == "Active" ? "success" : "secondary")">@item.TrangThai</span>
+                </td>
+                <td class="text-nowrap">
+                    <a asp-action="Sua" asp-route-id="@item.MaHopDong" class="btn btn-sm btn-outline-secondary">Sửa</a>
+                    <form asp-action="Xoa" asp-route-id="@item.MaHopDong" method="post" class="d-inline" onsubmit="return confirm('Xóa hợp đồng này?');">
+                        <button type="submit" class="btn btn-sm btn-outline-danger">Xóa</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">Chưa có dữ liệu hợp đồng.</div>
+    }
+</div>
+

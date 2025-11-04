@@ -1,0 +1,58 @@
+@model IEnumerable<HTQLPhongtro.Web.Models.QuyDinhPhatMoHinh>
+
+@{
+    ViewData["Title"] = "Danh sách quy định phạt";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (TempData["Loi"] is string msg && !string.IsNullOrWhiteSpace(msg))
+{
+    <div class="alert alert-warning">@msg</div>
+}
+
+<div class="mb-3">
+    <a asp-action="Tao" class="btn btn-primary">Thêm quy định phạt</a>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Mã</th>
+                <th>Loại vi phạm</th>
+                <th>Mô tả</th>
+                <th>Mức phạt</th>
+                <th>Đơn vị</th>
+                <th>Trạng thái</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaQuyDinh</td>
+                <td>@item.LoaiViPham</td>
+                <td>@(item.MoTa ?? "-")</td>
+                <td>@item.MucPhat.ToString("N0")</td>
+                <td>@item.DonVi</td>
+                <td>
+                    <span class="badge bg-@(item.IsActive ? "success" : "secondary")">@(item.IsActive ? "Hoạt động" : "Không hoạt động")</span>
+                </td>
+                <td class="text-nowrap">
+                    <a asp-action="Sua" asp-route-id="@item.MaQuyDinh" class="btn btn-sm btn-outline-secondary">Sửa</a>
+                    <form asp-action="Xoa" asp-route-id="@item.MaQuyDinh" method="post" class="d-inline" onsubmit="return confirm('Xóa quy định phạt này?');">
+                        <button type="submit" class="btn btn-sm btn-outline-danger">Xóa</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">Chưa có dữ liệu quy định phạt.</div>
+    }
+</div>
+

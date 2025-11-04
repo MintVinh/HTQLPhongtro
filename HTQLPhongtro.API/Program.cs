@@ -87,6 +87,15 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddScoped<IDonViCongViec, DonViCongViec>();
 builder.Services.AddScoped<IQuanLyPhongService, QuanLyPhongService>();
 builder.Services.AddScoped<ILoaiPhongService, LoaiPhongService>();
+builder.Services.AddScoped<IKhachHangService, KhachHangService>();
+builder.Services.AddScoped<ITaiSanService, TaiSanService>();
+builder.Services.AddScoped<IQuyDinhPhatService, QuyDinhPhatService>();
+builder.Services.AddScoped<IYeuCauSuaChuaService, YeuCauSuaChuaService>();
+builder.Services.AddScoped<IThongBaoService, ThongBaoService>();
+builder.Services.AddScoped<IHopDongService, HopDongService>();
+builder.Services.AddScoped<IChiSoDienNuocService, ChiSoDienNuocService>();
+builder.Services.AddScoped<IPhieuPhatService, PhieuPhatService>();
+builder.Services.AddScoped<IHoaDonThueService, HoaDonThueService>();
 
 var app = builder.Build();
 

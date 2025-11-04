@@ -1,0 +1,54 @@
+@model IEnumerable<HTQLPhongtro.Web.Models.TaiSanMoHinh>
+
+@{
+    ViewData["Title"] = "Danh sách tài sản";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (TempData["Loi"] is string msg && !string.IsNullOrWhiteSpace(msg))
+{
+    <div class="alert alert-warning">@msg</div>
+}
+
+<div class="mb-3">
+    <a asp-action="Tao" class="btn btn-primary">Thêm tài sản</a>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Mã</th>
+                <th>Tên tài sản</th>
+                <th>Mô tả</th>
+                <th>Đơn vị tính</th>
+                <th>Giá trị</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaTaiSan</td>
+                <td>@item.TenTaiSan</td>
+                <td>@(item.MoTa ?? "-")</td>
+                <td>@(item.DonViTinh ?? "-")</td>
+                <td>@(item.GiaTri?.ToString("N0") ?? "-")</td>
+                <td class="text-nowrap">
+                    <a asp-action="Sua" asp-route-id="@item.MaTaiSan" class="btn btn-sm btn-outline-secondary">Sửa</a>
+                    <form asp-action="Xoa" asp-route-id="@item.MaTaiSan" method="post" class="d-inline" onsubmit="return confirm('Xóa tài sản này?');">
+                        <button type="submit" class="btn btn-sm btn-outline-danger">Xóa</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">Chưa có dữ liệu tài sản.</div>
+    }
+</div>
+

@@ -1,0 +1,85 @@
+@model IEnumerable<HTQLPhongtro.Web.Models.HoaDonThueMoHinh>
+
+@{
+    ViewData["Title"] = "Danh sách hóa đơn thuê";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (TempData["Loi"] is string msg && !string.IsNullOrWhiteSpace(msg))
+{
+    <div class="alert alert-warning">@msg</div>
+}
+
+<form method="get" class="row g-2 mb-3">
+    <div class="col-md-3">
+        <input type="number" name="maHopDong" value="@Context.Request.Query["maHopDong"]" class="form-control" placeholder="Mã hợp đồng..." />
+    </div>
+    <div class="col-md-2">
+        <input type="number" name="thang" value="@Context.Request.Query["thang"]" class="form-control" placeholder="Tháng..." min="1" max="12" />
+    </div>
+    <div class="col-md-2">
+        <input type="number" name="nam" value="@Context.Request.Query["nam"]" class="form-control" placeholder="Năm..." min="2000" max="2100" />
+    </div>
+    <div class="col-md-3">
+        <select name="trangThai" class="form-select">
+            <option value="">-- Tất cả trạng thái --</option>
+            <option value="Unpaid" selected="@(Context.Request.Query["trangThai"]=="Unpaid")">Unpaid</option>
+            <option value="Paid" selected="@(Context.Request.Query["trangThai"]=="Paid")">Paid</option>
+        </select>
+    </div>
+    <div class="col-md-2 d-flex gap-2">
+        <button class="btn btn-outline-primary" type="submit">Lọc</button>
+        <a asp-action="Tao" class="btn btn-primary ms-auto">Thêm hóa đơn</a>
+    </div>
+</form>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Mã</th>
+                <th>Mã hóa đơn</th>
+                <th>Mã hợp đồng</th>
+                <th>Tháng/Năm</th>
+                <th>Tiền phòng</th>
+                <th>Tiền điện</th>
+                <th>Tiền nước</th>
+                <th>Tổng tiền</th>
+                <th>Hạn thanh toán</th>
+                <th>Trạng thái</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaHoaDon</td>
+                <td>@item.MaHoaDonString</td>
+                <td>@item.MaHopDong</td>
+                <td>@item.Thang/@item.Nam</td>
+                <td>@item.TienPhong.ToString("N0")</td>
+                <td>@item.TienDien.ToString("N0")</td>
+                <td>@item.TienNuoc.ToString("N0")</td>
+                <td><strong>@item.TongTien.ToString("N0")</strong></td>
+                <td>@item.HanThanhToan.ToString("dd/MM/yyyy")</td>
+                <td>
+                    <span class="badge bg-@(item.TrangThai == "Paid" ? "success" : "warning")">@item.TrangThai</span>
+                </td>
+                <td class="text-nowrap">
+                    <a asp-action="Sua" asp-route-id="@item.MaHoaDon" class="btn btn-sm btn-outline-secondary">Sửa</a>
+                    <form asp-action="Xoa" asp-route-id="@item.MaHoaDon" method="post" class="d-inline" onsubmit="return confirm('Xóa hóa đơn này?');">
+                        <button type="submit" class="btn btn-sm btn-outline-danger">Xóa</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">Chưa có dữ liệu hóa đơn thuê.</div>
+    }
+</div>
+

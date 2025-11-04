@@ -1,0 +1,76 @@
+@model IEnumerable<HTQLPhongtro.Web.Models.KhachHangMoHinh>
+
+@{
+    ViewData["Title"] = "Danh sách khách hàng";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (TempData["Loi"] is string msg && !string.IsNullOrWhiteSpace(msg))
+{
+    <div class="alert alert-warning">@msg</div>
+}
+
+<form method="get" class="row g-2 mb-3">
+    <div class="col-md-5">
+        <input type="text" name="tuKhoa" value="@Context.Request.Query["tuKhoa"]" class="form-control" placeholder="Tìm tên, SĐT, CCCD, Email..." />
+    </div>
+    <div class="col-md-4">
+        <select name="trangThai" class="form-select">
+            <option value="">-- Tất cả trạng thái --</option>
+            <option value="Active" selected="@(Context.Request.Query["trangThai"]=="Active")">Active</option>
+            <option value="Inactive" selected="@(Context.Request.Query["trangThai"]=="Inactive")">Inactive</option>
+        </select>
+    </div>
+    <div class="col-md-3 d-flex gap-2">
+        <button class="btn btn-outline-primary" type="submit">Lọc</button>
+        <a asp-action="Index" class="btn btn-outline-secondary">Xóa lọc</a>
+        <a asp-action="Tao" class="btn btn-primary ms-auto">Thêm khách hàng</a>
+    </div>
+</form>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Mã</th>
+                <th>Họ tên</th>
+                <th>CCCD</th>
+                <th>SĐT</th>
+                <th>Email</th>
+                <th>Ngày sinh</th>
+                <th>Nghề nghiệp</th>
+                <th>Trạng thái</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaKhach</td>
+                <td>@item.HoTen</td>
+                <td>@item.Cccd</td>
+                <td>@item.Sdt</td>
+                <td>@item.Email</td>
+                <td>@(item.NgaySinh?.ToString("dd/MM/yyyy") ?? "-")</td>
+                <td>@(item.NgheNghiep ?? "-")</td>
+                <td>
+                    <span class="badge bg-@(item.TrangThai == "Active" ? "success" : "secondary")">@item.TrangThai</span>
+                </td>
+                <td class="text-nowrap">
+                    <a asp-action="Sua" asp-route-id="@item.MaKhach" class="btn btn-sm btn-outline-secondary">Sửa</a>
+                    <form asp-action="Xoa" asp-route-id="@item.MaKhach" method="post" class="d-inline" onsubmit="return confirm('Xóa khách hàng này?');">
+                        <button type="submit" class="btn btn-sm btn-outline-danger">Xóa</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">Chưa có dữ liệu khách hàng.</div>
+    }
+</div>
+

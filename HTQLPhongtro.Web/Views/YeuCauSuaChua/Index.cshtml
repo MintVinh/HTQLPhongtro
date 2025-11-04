@@ -1,0 +1,80 @@
+@model IEnumerable<HTQLPhongtro.Web.Models.YeuCauSuaChuaMoHinh>
+
+@{
+    ViewData["Title"] = "Danh sách yêu cầu sửa chữa";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (TempData["Loi"] is string msg && !string.IsNullOrWhiteSpace(msg))
+{
+    <div class="alert alert-warning">@msg</div>
+}
+
+<form method="get" class="row g-2 mb-3">
+    <div class="col-md-5">
+        <input type="text" name="tuKhoa" value="@Context.Request.Query["tuKhoa"]" class="form-control" placeholder="Tìm tiêu đề, mô tả..." />
+    </div>
+    <div class="col-md-4">
+        <select name="trangThai" class="form-select">
+            <option value="">-- Tất cả trạng thái --</option>
+            <option value="Pending" selected="@(Context.Request.Query["trangThai"]=="Pending")">Pending</option>
+            <option value="Processing" selected="@(Context.Request.Query["trangThai"]=="Processing")">Processing</option>
+            <option value="Completed" selected="@(Context.Request.Query["trangThai"]=="Completed")">Completed</option>
+            <option value="Cancelled" selected="@(Context.Request.Query["trangThai"]=="Cancelled")">Cancelled</option>
+        </select>
+    </div>
+    <div class="col-md-3 d-flex gap-2">
+        <button class="btn btn-outline-primary" type="submit">Lọc</button>
+        <a asp-action="Index" class="btn btn-outline-secondary">Xóa lọc</a>
+        <a asp-action="Tao" class="btn btn-primary ms-auto">Thêm yêu cầu</a>
+    </div>
+</form>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Mã</th>
+                <th>Tiêu đề</th>
+                <th>Mã phòng</th>
+                <th>Mã khách</th>
+                <th>Mức độ</th>
+                <th>Ngày yêu cầu</th>
+                <th>Trạng thái</th>
+                <th>Chi phí</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaYeuCau</td>
+                <td>@item.TieuDe</td>
+                <td>@item.MaPhong</td>
+                <td>@item.MaKhach</td>
+                <td>
+                    <span class="badge bg-@(item.MucDo == "High" ? "danger" : item.MucDo == "Medium" ? "warning" : "info")">@item.MucDo</span>
+                </td>
+                <td>@item.NgayYeuCau.ToString("dd/MM/yyyy")</td>
+                <td>
+                    <span class="badge bg-@(item.TrangThai == "Completed" ? "success" : item.TrangThai == "Processing" ? "primary" : "secondary")">@item.TrangThai</span>
+                </td>
+                <td>@(item.ChiPhi?.ToString("N0") ?? "-")</td>
+                <td class="text-nowrap">
+                    <a asp-action="Sua" asp-route-id="@item.MaYeuCau" class="btn btn-sm btn-outline-secondary">Sửa</a>
+                    <form asp-action="Xoa" asp-route-id="@item.MaYeuCau" method="post" class="d-inline" onsubmit="return confirm('Xóa yêu cầu này?');">
+                        <button type="submit" class="btn btn-sm btn-outline-danger">Xóa</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">Chưa có dữ liệu yêu cầu sửa chữa.</div>
+    }
+</div>
+

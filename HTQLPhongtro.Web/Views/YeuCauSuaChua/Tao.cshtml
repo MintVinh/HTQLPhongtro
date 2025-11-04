@@ -1,0 +1,50 @@
+@model HTQLPhongtro.Web.Models.YeuCauSuaChuaTaoYeuCau
+
+@{
+    ViewData["Title"] = "Thêm yêu cầu sửa chữa";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Tao" method="post" class="mt-3">
+    <div class="row g-3">
+        <div class="col-md-6">
+            <label class="form-label">Mã phòng <span class="text-danger">*</span></label>
+            <input asp-for="MaPhong" class="form-control" type="number" />
+            <span asp-validation-for="MaPhong" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Mã khách hàng <span class="text-danger">*</span></label>
+            <input asp-for="MaKhach" class="form-control" type="number" />
+            <span asp-validation-for="MaKhach" class="text-danger"></span>
+        </div>
+        <div class="col-md-12">
+            <label class="form-label">Tiêu đề <span class="text-danger">*</span></label>
+            <input asp-for="TieuDe" class="form-control" />
+            <span asp-validation-for="TieuDe" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Mức độ <span class="text-danger">*</span></label>
+            <select asp-for="MucDo" class="form-select">
+                <option value="Normal">Normal</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <span asp-validation-for="MucDo" class="text-danger"></span>
+        </div>
+        <div class="col-12">
+            <label class="form-label">Mô tả <span class="text-danger">*</span></label>
+            <textarea asp-for="MoTa" class="form-control" rows="5"></textarea>
+            <span asp-validation-for="MoTa" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="mt-3 d-flex gap-2">
+        <button type="submit" class="btn btn-primary">Lưu</button>
+        <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

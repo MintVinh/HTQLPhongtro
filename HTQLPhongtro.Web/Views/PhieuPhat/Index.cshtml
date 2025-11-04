@@ -1,0 +1,74 @@
+@model IEnumerable<HTQLPhongtro.Web.Models.PhieuPhatMoHinh>
+
+@{
+    ViewData["Title"] = "Danh sách phiếu phạt";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (TempData["Loi"] is string msg && !string.IsNullOrWhiteSpace(msg))
+{
+    <div class="alert alert-warning">@msg</div>
+}
+
+<form method="get" class="row g-2 mb-3">
+    <div class="col-md-5">
+        <input type="number" name="maHopDong" value="@Context.Request.Query["maHopDong"]" class="form-control" placeholder="Mã hợp đồng..." />
+    </div>
+    <div class="col-md-4">
+        <select name="trangThai" class="form-select">
+            <option value="">-- Tất cả trạng thái --</option>
+            <option value="Unpaid" selected="@(Context.Request.Query["trangThai"]=="Unpaid")">Unpaid</option>
+            <option value="Paid" selected="@(Context.Request.Query["trangThai"]=="Paid")">Paid</option>
+        </select>
+    </div>
+    <div class="col-md-3 d-flex gap-2">
+        <button class="btn btn-outline-primary" type="submit">Lọc</button>
+        <a asp-action="Index" class="btn btn-outline-secondary">Xóa lọc</a>
+        <a asp-action="Tao" class="btn btn-primary ms-auto">Thêm phiếu phạt</a>
+    </div>
+</form>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Mã</th>
+                <th>Mã hợp đồng</th>
+                <th>Lý do</th>
+                <th>Số tiền</th>
+                <th>Ngày phạt</th>
+                <th>Trạng thái</th>
+                <th>Ngày thanh toán</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaPhieuPhat</td>
+                <td>@item.MaHopDong</td>
+                <td>@item.LyDo</td>
+                <td>@item.SoTien.ToString("N0")</td>
+                <td>@item.NgayPhat.ToString("dd/MM/yyyy")</td>
+                <td>
+                    <span class="badge bg-@(item.TrangThai == "Paid" ? "success" : "warning")">@item.TrangThai</span>
+                </td>
+                <td>@(item.NgayThanhToan?.ToString("dd/MM/yyyy") ?? "-")</td>
+                <td class="text-nowrap">
+                    <a asp-action="Sua" asp-route-id="@item.MaPhieuPhat" class="btn btn-sm btn-outline-secondary">Sửa</a>
+                    <form asp-action="Xoa" asp-route-id="@item.MaPhieuPhat" method="post" class="d-inline" onsubmit="return confirm('Xóa phiếu phạt này?');">
+                        <button type="submit" class="btn btn-sm btn-outline-danger">Xóa</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">Chưa có dữ liệu phiếu phạt.</div>
+    }
+</div>
+

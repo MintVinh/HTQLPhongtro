@@ -44,78 +44,146 @@
     </div>
 
     <div class="col-sm-6 col-md-4 col-lg-3">
-        <a asp-controller="Home" asp-action="Feature" asp-route-id="hop-dong" class="text-decoration-none">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">Hợp đồng</h5>
-                    <p class="card-text">Tạo/lưu trữ hợp đồng thuê</p>
+        <a asp-controller="HopDong" asp-action="Index" class="text-decoration-none">
+            <div class="the-chuc-nang h-100 p-3">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                    <div class="bieu-tuong">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+                        </svg>
+                    </div>
+                    <h5 class="m-0">Hợp đồng</h5>
                 </div>
+                <div class="phan-tieu-de">Tạo/lưu trữ hợp đồng thuê</div>
             </div>
         </a>
     </div>
 
     <div class="col-sm-6 col-md-4 col-lg-3">
-        <a asp-controller="Home" asp-action="Feature" asp-route-id="chi-so" class="text-decoration-none">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">Chỉ số điện nước</h5>
-                    <p class="card-text">Nhập/chốt chỉ số theo kỳ</p>
+        <a asp-controller="ChiSoDienNuoc" asp-action="Index" class="text-decoration-none">
+            <div class="the-chuc-nang h-100 p-3">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                    <div class="bieu-tuong">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                          <path d="M7.5 4.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H7V5a.5.5 0 0 1 .5-.5z"/>
+                        </svg>
+                    </div>
+                    <h5 class="m-0">Chỉ số điện nước</h5>
                 </div>
+                <div class="phan-tieu-de">Nhập/chốt chỉ số theo kỳ</div>
             </div>
         </a>
     </div>
 
     <div class="col-sm-6 col-md-4 col-lg-3">
-        <a asp-controller="Home" asp-action="Feature" asp-route-id="hoa-don" class="text-decoration-none">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">Hóa đơn</h5>
-                    <p class="card-text">Sinh hóa đơn, theo dõi công nợ</p>
+        <a asp-controller="HoaDonThue" asp-action="Index" class="text-decoration-none">
+            <div class="the-chuc-nang h-100 p-3">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                    <div class="bieu-tuong">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+                        </svg>
+                    </div>
+                    <h5 class="m-0">Hóa đơn thuê</h5>
                 </div>
+                <div class="phan-tieu-de">Sinh hóa đơn, theo dõi công nợ</div>
             </div>
         </a>
     </div>
 
     <div class="col-sm-6 col-md-4 col-lg-3">
-        <a asp-controller="Home" asp-action="Feature" asp-route-id="thanh-toan" class="text-decoration-none">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">Thanh toán</h5>
-                    <p class="card-text">Xác nhận/đối soát thanh toán</p>
+        <a asp-controller="KhachHang" asp-action="Index" class="text-decoration-none">
+            <div class="the-chuc-nang h-100 p-3">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                    <div class="bieu-tuong">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                        </svg>
+                    </div>
+                    <h5 class="m-0">Khách hàng</h5>
                 </div>
+                <div class="phan-tieu-de">Hồ sơ và lịch sử cư trú</div>
             </div>
         </a>
     </div>
 
     <div class="col-sm-6 col-md-4 col-lg-3">
-        <a asp-controller="Home" asp-action="Feature" asp-route-id="khach-hang" class="text-decoration-none">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">Khách thuê</h5>
-                    <p class="card-text">Hồ sơ và lịch sử cư trú</p>
+        <a asp-controller="YeuCauSuaChua" asp-action="Index" class="text-decoration-none">
+            <div class="the-chuc-nang h-100 p-3">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                    <div class="bieu-tuong">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M8.5 1.5A1.5 1.5 0 0 0 7 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-5A1.5 1.5 0 0 0 8.5 1.5Z"/>
+                        </svg>
+                    </div>
+                    <h5 class="m-0">Yêu cầu sửa chữa</h5>
                 </div>
+                <div class="phan-tieu-de">Ticket, SLA, phân công</div>
             </div>
         </a>
     </div>
 
     <div class="col-sm-6 col-md-4 col-lg-3">
-        <a asp-controller="Home" asp-action="Feature" asp-route-id="bao-tri" class="text-decoration-none">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">Yêu cầu sửa chữa</h5>
-                    <p class="card-text">Ticket, SLA, phân công</p>
+        <a asp-controller="TaiSan" asp-action="Index" class="text-decoration-none">
+            <div class="the-chuc-nang h-100 p-3">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                    <div class="bieu-tuong">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
+                        </svg>
+                    </div>
+                    <h5 class="m-0">Tài sản</h5>
                 </div>
+                <div class="phan-tieu-de">Quản lý tài sản phòng</div>
             </div>
         </a>
     </div>
 
     <div class="col-sm-6 col-md-4 col-lg-3">
-        <a asp-controller="Home" asp-action="Feature" asp-route-id="bao-cao" class="text-decoration-none">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">Báo cáo</h5>
-                    <p class="card-text">Doanh thu, công nợ, lấp đầy</p>
+        <a asp-controller="ThongBao" asp-action="Index" class="text-decoration-none">
+            <div class="the-chuc-nang h-100 p-3">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                    <div class="bieu-tuong">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                        </svg>
+                    </div>
+                    <h5 class="m-0">Thông báo</h5>
                 </div>
+                <div class="phan-tieu-de">Gửi và quản lý thông báo</div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3">
+        <a asp-controller="PhieuPhat" asp-action="Index" class="text-decoration-none">
+            <div class="the-chuc-nang h-100 p-3">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                    <div class="bieu-tuong">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
+                        </svg>
+                    </div>
+                    <h5 class="m-0">Phiếu phạt</h5>
+                </div>
+                <div class="phan-tieu-de">Quản lý vi phạm và phạt</div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3">
+        <a asp-controller="QuyDinhPhat" asp-action="Index" class="text-decoration-none">
+            <div class="the-chuc-nang h-100 p-3">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                    <div class="bieu-tuong">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+                        </svg>
+                    </div>
+                    <h5 class="m-0">Quy định phạt</h5>
+                </div>
+                <div class="phan-tieu-de">Quy định và mức phạt</div>
             </div>
         </a>
     </div>

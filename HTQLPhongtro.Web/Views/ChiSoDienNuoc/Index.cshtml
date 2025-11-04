@@ -1,0 +1,64 @@
+@model IEnumerable<HTQLPhongtro.Web.Models.ChiSoDienNuocMoHinh>
+
+@{
+    ViewData["Title"] = "Danh sách chỉ số điện nước";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (TempData["Loi"] is string msg && !string.IsNullOrWhiteSpace(msg))
+{
+    <div class="alert alert-warning">@msg</div>
+}
+
+<div class="mb-3">
+    <a asp-action="Tao" class="btn btn-primary">Thêm chỉ số điện nước</a>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Mã</th>
+                <th>Mã phòng</th>
+                <th>Tháng/Năm</th>
+                <th>Chỉ số điện cũ</th>
+                <th>Chỉ số điện mới</th>
+                <th>Tiêu thụ điện</th>
+                <th>Chỉ số nước cũ</th>
+                <th>Chỉ số nước mới</th>
+                <th>Tiêu thụ nước</th>
+                <th>Ngày ghi</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaChiSo</td>
+                <td>@item.MaPhong</td>
+                <td>@item.Thang/@item.Nam</td>
+                <td>@item.ChiSoDienCu</td>
+                <td>@item.ChiSoDienMoi</td>
+                <td>@item.TieuThuDien</td>
+                <td>@item.ChiSoNuocCu</td>
+                <td>@item.ChiSoNuocMoi</td>
+                <td>@item.TieuThuNuoc</td>
+                <td>@item.NgayGhi.ToString("dd/MM/yyyy")</td>
+                <td class="text-nowrap">
+                    <a asp-action="Sua" asp-route-id="@item.MaChiSo" class="btn btn-sm btn-outline-secondary">Sửa</a>
+                    <form asp-action="Xoa" asp-route-id="@item.MaChiSo" method="post" class="d-inline" onsubmit="return confirm('Xóa chỉ số này?');">
+                        <button type="submit" class="btn btn-sm btn-outline-danger">Xóa</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">Chưa có dữ liệu chỉ số điện nước.</div>
+    }
+</div>
+

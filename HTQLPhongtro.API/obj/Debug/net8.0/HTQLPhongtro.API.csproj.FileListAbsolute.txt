@@ -164,7 +164,6 @@ C:\study\klcn\HTQLPhongtro\HTQLPhongtro.API\obj\Debug\net8.0\staticwebassets.bui
 C:\study\klcn\HTQLPhongtro\HTQLPhongtro.API\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\study\klcn\HTQLPhongtro\HTQLPhongtro.API\obj\Debug\net8.0\staticwebassets.development.json
 C:\study\klcn\HTQLPhongtro\HTQLPhongtro.API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\study\klcn\HTQLPhongtro\HTQLPhongtro.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\study\klcn\HTQLPhongtro\HTQLPhongtro.API\obj\Debug\net8.0\HTQLPhon.694F3F21.Up2Date
 C:\study\klcn\HTQLPhongtro\HTQLPhongtro.API\obj\Debug\net8.0\HTQLPhongtro.API.dll
 C:\study\klcn\HTQLPhongtro\HTQLPhongtro.API\obj\Debug\net8.0\refint\HTQLPhongtro.API.dll
@@ -172,3 +171,4 @@ C:\study\klcn\HTQLPhongtro\HTQLPhongtro.API\obj\Debug\net8.0\HTQLPhongtro.API.pd
 C:\study\klcn\HTQLPhongtro\HTQLPhongtro.API\obj\Debug\net8.0\HTQLPhongtro.API.genruntimeconfig.cache
 C:\study\klcn\HTQLPhongtro\HTQLPhongtro.API\obj\Debug\net8.0\ref\HTQLPhongtro.API.dll
 C:\study\klcn\HTQLPhongtro\HTQLPhongtro.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\study\klcn\HTQLPhongtro\HTQLPhongtro.API\obj\Debug\net8.0\HTQLPhongtro.API.sourcelink.json

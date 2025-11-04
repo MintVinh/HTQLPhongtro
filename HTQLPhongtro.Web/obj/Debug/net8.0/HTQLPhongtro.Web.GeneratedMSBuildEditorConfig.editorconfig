@@ -9,77 +9,185 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HTQLPhongtro.Web
 build_property.RootNamespace = HTQLPhongtro.Web
-build_property.ProjectDir = C:\study\klcn\HTQLPhongtro\HTQLPhongtro.Web\
+build_property.ProjectDir = c:\study\klcn\HTQLPhongtro\HTQLPhongtro.Web\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\study\klcn\HTQLPhongtro\HTQLPhongtro.Web
+build_property.MSBuildProjectDirectory = c:\study\klcn\HTQLPhongtro\HTQLPhongtro.Web
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/Home/Feature.cshtml]
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/ChiSoDienNuoc/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hpU29EaWVuTnVvY1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/ChiSoDienNuoc/Sua.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hpU29EaWVuTnVvY1xTdWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/ChiSoDienNuoc/Tao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hpU29EaWVuTnVvY1xUYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/HoaDonThue/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9hRG9uVGh1ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/HoaDonThue/Sua.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9hRG9uVGh1ZVxTdWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/HoaDonThue/Tao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9hRG9uVGh1ZVxUYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/Home/Feature.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGZWF0dXJlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/Home/Index.cshtml]
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/Home/Privacy.cshtml]
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/LoaiPhong/Index.cshtml]
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/HopDong/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9wRG9uZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/HopDong/Sua.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9wRG9uZ1xTdWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/HopDong/Tao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9wRG9uZ1xUYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/KhachHang/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hhY2hIYW5nXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/KhachHang/Sua.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hhY2hIYW5nXFN1YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/KhachHang/Tao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hhY2hIYW5nXFRhby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/LoaiPhong/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9haVBob25nXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/LoaiPhong/Sua.cshtml]
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/LoaiPhong/Sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9haVBob25nXFN1YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/LoaiPhong/Tao.cshtml]
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/LoaiPhong/Tao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9haVBob25nXFRhby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/Phong/Index.cshtml]
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/PhieuPhat/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhpZXVQaGF0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/PhieuPhat/Sua.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhpZXVQaGF0XFN1YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/PhieuPhat/Tao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhpZXVQaGF0XFRhby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/Phong/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmdcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/Phong/Sua.cshtml]
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/Phong/Sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmdcU3VhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/Phong/Tao.cshtml]
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/Phong/Tao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmdcVGFvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/Rooms/Index.cshtml]
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/QuyDinhPhat/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXV5RGluaFBoYXRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/QuyDinhPhat/Sua.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXV5RGluaFBoYXRcU3VhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/QuyDinhPhat/Tao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXV5RGluaFBoYXRcVGFvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/Rooms/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/Shared/Error.cshtml]
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/TaiKhoan/DangNhap.cshtml]
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/TaiKhoan/DangNhap.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFpS2hvYW5cRGFuZ05oYXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/_ViewImports.cshtml]
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/TaiSan/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFpU2FuXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/TaiSan/Sua.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFpU2FuXFN1YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/TaiSan/Tao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFpU2FuXFRhby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/ThongBao/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhvbmdCYW9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/ThongBao/Sua.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhvbmdCYW9cU3VhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/ThongBao/Tao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhvbmdCYW9cVGFvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/YeuCauSuaChua/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWWV1Q2F1U3VhQ2h1YVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/YeuCauSuaChua/Sua.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWWV1Q2F1U3VhQ2h1YVxTdWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/YeuCauSuaChua/Tao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWWV1Q2F1U3VhQ2h1YVxUYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/_ViewStart.cshtml]
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/Shared/_Layout.cshtml]
+[c:/study/klcn/HTQLPhongtro/HTQLPhongtro.Web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-041tj4ab66

@@ -1,0 +1,62 @@
+@model IEnumerable<HTQLPhongtro.Web.Models.ThongBaoMoHinh>
+
+@{
+    ViewData["Title"] = "Danh sách thông báo";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (TempData["Loi"] is string msg && !string.IsNullOrWhiteSpace(msg))
+{
+    <div class="alert alert-warning">@msg</div>
+}
+
+<div class="mb-3">
+    <a asp-action="Tao" class="btn btn-primary">Thêm thông báo</a>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Mã</th>
+                <th>Loại thông báo</th>
+                <th>Tiêu đề</th>
+                <th>Mức độ</th>
+                <th>Ngày gửi</th>
+                <th>Ngày hết hạn</th>
+                <th>Trạng thái</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaThongBao</td>
+                <td>@item.LoaiThongBao</td>
+                <td>@item.TieuDe</td>
+                <td>
+                    <span class="badge bg-@(item.MucDo == "High" ? "danger" : item.MucDo == "Medium" ? "warning" : "info")">@item.MucDo</span>
+                </td>
+                <td>@item.NgayGui.ToString("dd/MM/yyyy")</td>
+                <td>@(item.NgayHetHan?.ToString("dd/MM/yyyy") ?? "-")</td>
+                <td>
+                    <span class="badge bg-@(item.IsActive ? "success" : "secondary")">@(item.IsActive ? "Hoạt động" : "Không hoạt động")</span>
+                </td>
+                <td class="text-nowrap">
+                    <a asp-action="Sua" asp-route-id="@item.MaThongBao" class="btn btn-sm btn-outline-secondary">Sửa</a>
+                    <form asp-action="Xoa" asp-route-id="@item.MaThongBao" method="post" class="d-inline" onsubmit="return confirm('Xóa thông báo này?');">
+                        <button type="submit" class="btn btn-sm btn-outline-danger">Xóa</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">Chưa có dữ liệu thông báo.</div>
+    }
+</div>
+
